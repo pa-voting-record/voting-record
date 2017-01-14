@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  view:
+    image: "node:6.9.4"
+    ports:
+     - '3000:3000'
+    volumes:
+     - ./app/view:/var/lib/view
+
+volumes:
+  views:
+
+  
+     
+     
