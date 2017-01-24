@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { MuiThemeProvider } from 'material-ui';
+
+//Componenet & Data-Store Import
+import Body from './Body'
+import BodyStore from './store/body-data';
+import Nav from './Nav';
+import NavStore from "./store/nav-data"
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <MuiThemeProvider>
+        <div>
+          <Nav store={ NavStore } />
+          <Body store={ BodyStore } />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </MuiThemeProvider>
     );
   }
 }
